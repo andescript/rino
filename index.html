@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Visualización de Datos con PyScript</title>
+    <!-- Asegúrate de incluir PyScript y las bibliotecas necesarias aquí -->
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
+    <py-env>
+        - requests
+        - numpy
+        - pandas
+        - matplotlib
+        <!-- Lista aquí todas las dependencias de PyPi que necesites -->
+    </py-env>
 
-<py-script>
-import micropip
-await micropip.install(['pandas', 'numpy', 'matplotlib', 'requests'])
-
+    <py-script>
+        # Aquí va tu código Python adaptado
 import requests
 import pandas as pd
 import numpy as np
@@ -84,7 +91,6 @@ ax2.set_title('RSI (14) (Last 120 Days)')
 
 plt.tight_layout()
 plt.show()
-</py-script>
-
+    </py-script>
 </body>
 </html>
