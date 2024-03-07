@@ -1,27 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-
-    <py-env>
-        - requests
-        - pandas
-        - numpy
-        - matplotlib
-
-    </py-env>
+    <title>Visualización de Datos con PyScript</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
-    <h1>Test</h1>
-    <py-script> print("My Lineplot")</py-script>
-    <div id="lineplot"></div>
-    <py-script output="lineplot">
-# Python Code Goes Here ...
+
+<py-script>
+import micropip
+await micropip.install(['pandas', 'numpy', 'matplotlib', 'requests'])
+
 import requests
 import pandas as pd
 import numpy as np
@@ -95,6 +84,7 @@ ax2.set_title('RSI (14) (Last 120 Days)')
 
 plt.tight_layout()
 plt.show()
-    </py-script>
+</py-script>
+
 </body>
 </html>
